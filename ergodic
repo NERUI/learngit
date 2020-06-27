@@ -1,0 +1,57 @@
+public void preOrderTraverse1(TreeNode root) {
+        if (root != null) {
+            System.out.print(root.val + "->");
+            preOrderTraverse1(root.left);
+            preOrderTraverse1(root.right);
+        }
+    }
+     public void inOrderTraverse(TreeNode root) {
+        if (root != null) {
+            inOrderTraverse(root.left);
+            System.out.print(root.val + "->");
+            inOrderTraverse(root.right);
+        }
+    }
+ public void postOrderTraverse(TreeNode root) {
+        if (root != null) {
+            postOrderTraverse(root.left);
+            postOrderTraverse(root.right);
+            System.out.print(root.val + "->");
+        }
+    }
+    
+    
+    
+    
+Status PreOrderTraverse(BiTree T) {
+    if (T == NULL) {
+        return OK;
+    }
+    else {
+        printf("%c", T->data);
+        PreOrderTraverse(T->lchild);
+        PreOrderTraverse(T->rchild);
+    }
+}
+
+Status InOrderTraverse(BiTree T) {
+    if (T == NULL) {
+        return OK;
+    }
+    else {
+        InOrderTraverse(T->lchild);
+        printf("%c", T->data);
+        InOrderTraverse(T->rchild);
+    }
+}
+
+Status PostOrderTraverse(BiTree T) {
+    if (T == NULL) {
+        return OK;
+    }
+    else {
+        PostOrderTraverse(T->lchild);
+        PostOrderTraverse(T->rchild);
+        printf("%c", T->data);
+    }
+}
